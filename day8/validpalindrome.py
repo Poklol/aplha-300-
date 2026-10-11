@@ -1,7 +1,7 @@
 class Solution:
 
   def validPalindrome(self, s: str) -> bool:
-    # Helper to check if a specific slice is already a palindrome
+   
     def is_pali(l, r):
       while l < r:
         if s[l] != s[r]:
@@ -18,7 +18,7 @@ class Solution:
         left += 1
         right -= 1
       else:
-        # First mismatch: try skipping left OR skipping right
+       
         return is_pali(left + 1, right) or is_pali(left, right - 1)
 
     return True
