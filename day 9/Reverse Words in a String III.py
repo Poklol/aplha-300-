@@ -7,7 +7,7 @@ class Solution:
             left = 0
             right = len(word_list) - 1
             
-            # Reverse characters of the single word
+            
             while left < right:
                 temp = word_list[left]
                 word_list[left] = word_list[right]
@@ -15,13 +15,13 @@ class Solution:
                 left = left + 1
                 right = right - 1
             
-            # Reconstruct the single reversed word
+            
             reversed_word = ""
             for ch in word_list:
                 reversed_word = reversed_word + ch
             words[w_idx] = reversed_word
             
-        # Combine all words with spaces
+       
         ans = ""
         for i in range(len(words)):
             ans = ans + words[i]
